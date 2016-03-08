@@ -1,0 +1,6 @@
+List<Card> cardList = userService.findAll();
+for(Card card:cardList){
+    if(card.getName().equal("1?")){
+
+    }
+}

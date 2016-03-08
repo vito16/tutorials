@@ -1,0 +1,7 @@
+import org.springframework.context.support.ClassPathXmlApplicationContext
+
+def ctx = new ClassPathXmlApplicationContext('spring.xml')
+def userService = ctx.getBean('userService')
+def result = userService.findOne()
+println 'hello ${name}!'
+return result

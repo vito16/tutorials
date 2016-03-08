@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="classpath*:dubbo.xml"/>
+
+    <!--<bean id="userService" class="com.vito16.groovy.parser.UserService"/>-->
+
+    <bean id="groovyService" class="com.vito16.groovy.service.GroovyServiceImpl">
+        <property name="userService" ref="userService"></property>
+    </bean>
+
+    <!--script-source tag can't find file,throw IOException-->
+    <!--<lang:groovy id="groovyService" script-source="classpath:com.vito16.groovy.service.GroovyServiceImplImpl.groovy">
+        <lang:property name="userService" ref="userService"/>
+    </lang:groovy>-->
+
+</beans>

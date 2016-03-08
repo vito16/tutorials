@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="GOJ" owner="muyu"/>
+
+    <dubbo:registry protocol="zookeeper" address="192.168.45.10:2181"
+                    file="/home/vito/dubbo/dubbo-client/dubbo.cache" register="false" />
+
+    <dubbo:protocol name="dubbo" port="20882" threads="200" />
+
+    <dubbo:reference interface="com.vito16.dubbo.service.UserService" id="userService"></dubbo:reference>
+    <!--<dubbo:reference interface="com.yjf.customer.service.api.query.CardQueryService" id="cardQueryService"></dubbo:reference>
+-->
+</beans>
