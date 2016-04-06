@@ -4,7 +4,7 @@ import com.vito16.dubbo.service.UserService;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by vito on 15-1-29.
+ * Created by vito on 15-1-29.1
  */
 @Service("userService")
 public class UserServiceImpl implements UserService {
