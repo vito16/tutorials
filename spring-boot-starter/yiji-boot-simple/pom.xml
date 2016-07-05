@@ -36,7 +36,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-            <version>yiji-1.0.18</version>
+            <version>1.0.21</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
