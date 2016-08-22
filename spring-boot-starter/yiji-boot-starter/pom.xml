@@ -21,7 +21,5 @@
             <artifactId>yiji-boot-autoconfigure</artifactId>
             <version>${project.version}</version>
         </dependency>
-
-
     </dependencies>
 </project>

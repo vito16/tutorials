@@ -1,0 +1,27 @@
+/*
+ * www.yiji.com Inc.
+ * Copyright (c) 2016 All Rights Reserved
+ */
+
+/*
+ * 修订记录:
+ * muyu@yiji.com 2016-07-25 17:42 创建
+ *
+ */
+package com.vito16.jdk8.functionalinterface;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.BlockJUnit4ClassRunner;
+
+/**
+ * @author 木鱼 muyu@yiji.com
+ * @version 2016/07/25
+ */
+@RunWith(BlockJUnit4ClassRunner.class)
+public class FunctionalInterfaceTest {
+    @Test
+    public void test1(){
+        new FunctionalClient(str -> str+"ABC");
+    }
+}

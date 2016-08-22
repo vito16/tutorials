@@ -10,6 +10,7 @@
  */
 package com.vito16.jdk8.defaultmethod;
 
+import com.google.common.collect.Lists;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.BlockJUnit4ClassRunner;
@@ -20,8 +21,20 @@ import org.junit.runners.BlockJUnit4ClassRunner;
  */
 @RunWith(BlockJUnit4ClassRunner.class)
 public class Default1Test {
-    @Test
-    public void testSay() {
-        System.out.println(new Default1().say());
-    }
+	@Test
+	public void testSay() {
+		System.out.println(new Default1() {
+			@Override
+			public String say() {
+				return "我再来修改下。";
+			}
+		}.say());
+		
+		Lists.newArrayList("a", "c", "b", "a").
+                stream().
+                map(String::toUpperCase).
+                sorted((a,b)->a.compareTo(b)).
+                forEach(System.out::println);
+		
+	}
 }

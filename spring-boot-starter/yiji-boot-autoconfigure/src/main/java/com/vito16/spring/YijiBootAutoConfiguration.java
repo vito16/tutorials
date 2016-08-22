@@ -23,6 +23,7 @@ public class YijiBootAutoConfiguration {
     @Bean
     @ConditionalOnMissingBean
     public DataSource dataSource(){
+        System.out.println("hello! spring boot.");
         DruidDataSource dataSource = new DruidDataSource();
         dataSource.setDriverClassName(properties.getDriver());
         dataSource.setUrl(properties.getUrl());
